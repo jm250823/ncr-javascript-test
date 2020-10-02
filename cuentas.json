@@ -1,0 +1,66 @@
+{
+  "cuentas": [
+    {
+      "type": 1,
+      "number": "872378326701",
+      "saldo": 1500
+    },
+    {
+      "type": 2,
+      "number": "872378326702",
+      "saldo": 150
+    },
+    {
+      "type": 1,
+      "number": "872378326703",
+      "saldo": 0
+    },
+    {
+      "type": 3,
+      "number": "872378326704",
+      "saldo": 20000
+    },
+    {
+      "type": 8,
+      "number": "872378326705",
+      "saldo": 0
+    },
+    {
+      "type": 4,
+      "number": "872378326706",
+      "saldo": -100.42
+    },
+    {
+      "type": 2,
+      "number": "872378326707",
+      "saldo": 1013.21
+    },
+    {
+      "type": 1,
+      "number": "872378326708",
+      "saldo": 1349.60
+    }
+  ],
+  "tipos": [
+    {
+      "nombre": "Caja de ahorro en pesos",
+      "codigo": "CA $",
+      "id": 1
+    },
+    {
+      "nombre": "Caja de ahorro en dolares",
+      "codigo": "CA U$S",
+      "id": 2
+    },
+    {
+      "nombre": "Cuenta corriente en pesos",
+      "codigo": "CC $",
+      "id": 3
+    },
+    {
+      "nombre": "Cuenta corriente en dolares",
+      "codigo": "CC U$S",
+      "id": 4
+    }
+  ]
+}
