@@ -7,7 +7,7 @@ window.onload = async () => {
     const portfolio = new Portfolio(response);
     console.log("portfolio result", portfolio);
 
-    if(!portfolio.accounts) return;
+    if(!portfolio.cuentas) return;
     document.getElementById("saldo$").innerHTML = portfolio.get_saldo("$");
     document.getElementById("saldou$s").innerHTML = portfolio.get_saldo("u$s");
     document.getElementById("main").innerHTML = portfolio.cuentas.reduce((accumulator, currentValue) => { return accumulator + currentValue.toHtml() }, "")
