@@ -1,18 +1,37 @@
 class AccType {
-    //id: number
-    //codigo: string
-    //nombre: string
+    
+    constructor(data){
+        //id: number
+        //codigo: string
+        //nombre: string
+    }
 }
 
 class Account {
-    //tipo: AccType
-    //nombre: string
-    //saldo: number
+
+    constructor(data){
+        //tipo: AccType
+        //nombre: string
+        //saldo: number
+    }
 
     toHtml() {
         return `
-        <div>Cuenta de ejemplo</div>
-      `
+            <div>Cuenta de ejemplo</div>
+        `
+    }
+}
+
+class Portfolio{
+    //cuentas: Account
+
+    get_saldo(moneda){
+        return 0.00
+    }
+
+    constructor(data){
+        this.cuentas = [new Account(), new Account()]
+        //Mapear respuesta a un array de Accounts filtrando las que no tengan un tipo valido
     }
 }
 
@@ -20,10 +39,9 @@ async function fetchAPI(url) {
     return []
 }
 
-function mapToAccounts(resp) {
-    //Mapear respuesta a un array de Accounts filtrando las que no tengan un tipo valido
-    return [new Account(), new Account()]
-}
+
+
+
 
 
 
@@ -33,8 +51,11 @@ window.onload = async () => {
 
     const response = await fetchAPI(API_ENDPOINT);
     console.log("fetchAPI response:", response);
-    const accounts = mapToAccounts(response);
-    console.log("mappToAccounts result", accounts);
+    const portfolio = new Portfolio(response);
+    console.log("portfolio result", portfolio);
 
-    document.getElementById("main").innerHTML = accounts.reduce((accumulator, currentValue) => { return accumulator + currentValue.toHtml() }, "")
+    if(!portfolio.accounts) return;
+    document.getElementById("saldo$").innerHTML = portfolio.get_saldo("$");
+    document.getElementById("saldou$s").innerHTML = portfolio.get_saldo("u$s");
+    document.getElementById("main").innerHTML = portfolio.cuentas.reduce((accumulator, currentValue) => { return accumulator + currentValue.toHtml() }, "")
 }

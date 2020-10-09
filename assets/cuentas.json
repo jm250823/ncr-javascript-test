@@ -44,22 +44,26 @@
   "tipos": [
     {
       "nombre": "Caja de ahorro en pesos",
-      "codigo": "CA $",
+      "codigo": "CA",
+      "moneda": "$",
       "id": 1
     },
     {
       "nombre": "Caja de ahorro en dolares",
-      "codigo": "CA U$S",
+      "codigo": "CA",
+      "moneda": "U$S",
       "id": 2
     },
     {
       "nombre": "Cuenta corriente en pesos",
-      "codigo": "CC $",
+      "codigo": "CC",
+      "moneda": "$",
       "id": 3
     },
     {
       "nombre": "Cuenta corriente en dolares",
-      "codigo": "CC U$S",
+      "codigo": "CC",
+      "moneda": "U$S",
       "id": 4
     }
   ]
